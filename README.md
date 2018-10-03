@@ -9,6 +9,7 @@
 ### Association
 - has_many :groups, through: :members
 - has_many :messeages
+- has_many :members
 
 ## groupsテーブル
 
@@ -20,6 +21,7 @@
 ### Association
 - has_many :users, through: :members
 - has_many :messeages
+- has_many :members
 
 ## messeagesテーブル
 
