@@ -10,6 +10,13 @@
     font-size: 16px;
     font-weight:bold;
     padding-left: 20px;
+    .icon_bar{
+      float: right;
+      padding-right: 20px;
+      .icon{
+        color: white;
+      }
+    }
   }
   &__group {
     padding-top: 20px;
