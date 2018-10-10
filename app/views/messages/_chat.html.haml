@@ -1,0 +1,45 @@
+.chat
+  .chat__group
+    .chat-contents
+      .name
+        group.name
+      .members
+        Members: member1 member2
+    = link_to "EDIT",messages_path,class:"edit_button"
+
+  %hr
+
+  .chat__messages
+    %span.user_name
+      member1
+    %span.updated_at
+      2018/10/5 12:00:00
+    .body
+      あああああ
+
+  .chat__messages
+    %span.user_name
+      member2
+    %span.updated_at
+      2018/10/5 13:00:00
+    .body
+      yeah!
+
+  .chat__messages
+    %span.user_name
+      member1
+    %span.updated_at
+      2018/10/10 13:00:00
+    .body
+      できた！
+
+  .chat__form
+    %form
+      %input.text{type: :text, placeholder: "type a messeage"}
+      %input.button{type: :submit, value: :SEND}
+      = fa_icon "image",class: 'send-icon'
+
+
+
+
+
