@@ -1,6 +1,12 @@
 .head_bar{
-  width: 100vw;
-  background: $light_blue;
-  color: #ffffff;
-  text-align: center;
+  .notice{
+    background: $light_blue;
+    color: $text_white;
+    text-align: center;
   }
+  .alert{
+    background: $alert_orange;
+    color: $text_white;
+    text-align: center;
+  }
+}
