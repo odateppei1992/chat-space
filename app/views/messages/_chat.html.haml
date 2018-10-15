@@ -34,9 +34,9 @@
       できた！
 
   .chat__form
-    %form
-      %input.text{type: :text, placeholder: "type a messeage"}
-      %input.button{type: :submit, value: :SEND}
+    = form_for [@group,@message] do |f|
+      = f.text_field :body,class: 'text', placeholder: 'type a message'
+      = f.submit class: 'button',value: "SEND"
       = fa_icon "image",class: 'send-icon'
 
 
