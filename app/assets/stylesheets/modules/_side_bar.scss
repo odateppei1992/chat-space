@@ -21,13 +21,13 @@
   }
   &__group {
     padding-top: 20px;
-    padding-bottom: 20px;
     padding-left: 20px;
     .group_name{
       font-size: 15px;
     }
     .last_message{
       font-size: 11px;
+      padding-bottom: 20px;
     }
   }
 }
