@@ -37,7 +37,9 @@
     = form_for [@group,@message] do |f|
       = f.text_field :body,class: 'text', placeholder: 'type a message'
       = f.submit class: 'button',value: "SEND"
-      = fa_icon "image",class: 'send-icon'
+      = f.label :image do
+        = fa_icon "image",class: 'send-icon'
+        = f.file_field :image, class: 'hidden'
 
 
 
