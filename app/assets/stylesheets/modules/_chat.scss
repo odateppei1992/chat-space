@@ -74,13 +74,14 @@
       z-index:1;
     }
     .button{
+      position: absolute;
       height: 50px;
       width: 100px;
       float: right;
       color: white;
       background:$light_blue;
-      margin-top:20px;
-      margin-right: 40px;
+      top:20px;
+      right: 40px;
     }
     .send-icon{
       position: absolute;
