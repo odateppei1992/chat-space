@@ -4,7 +4,9 @@
       .name
         = @group.name
       .members
-        Members: member1 member2
+        Members:
+        - @group.users.each do |user|
+          = user.name
     = link_to "EDIT",edit_group_path(@group),class:"edit_button"
 
   %hr
