@@ -2,7 +2,7 @@
   .chat__group
     .chat-contents
       .name
-        group.name
+        = @group.name
       .members
         Members: member1 member2
     = link_to "EDIT",edit_group_path(@group),class:"edit_button"
@@ -13,9 +13,11 @@
       %span.user_name
         = message.user.name
       %span.updated_at
-        = message.updated_at
+        = message.updated_at.strftime('%Y/%m/%d %H:%M')
       .body
         = message.body
+      = image_tag message.image if message.image.present?
+
 
   .chat__form
     = form_for [@group,@message] do |f|
