@@ -35,5 +35,8 @@ $(function(){
       $('.text').val('')
       $('.chat__space').animate({scrollTop: $('.chat__space')[0].scrollHeight}, 'slow','swing');
     })
+    .fail(function(data){
+      alert('通信に失敗しました')
+    })
   })
 });
