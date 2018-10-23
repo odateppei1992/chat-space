@@ -1,6 +1,6 @@
 $(function(){
   function buildHAML(message){
-    if(message.image){
+    if(!message.image){
       var html = `<div class='message'>
                   <span class='user_name'>${message.name}</span>
                   <span class='updated_at'>${message.updated_at}</span>
