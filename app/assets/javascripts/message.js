@@ -1,8 +1,20 @@
 $(function(){
   function buildHAML(message){
-    var html = `<span class='user_name'>${message.name}</span>
-                <span class='updated_at'>${message.updated_at}</span>
-                <div class='body'>${message.body}</div>`
+    if(message.image){
+      var html = `<div class='message'>
+                  <span class='user_name'>${message.name}</span>
+                  <span class='updated_at'>${message.updated_at}</span>
+                  <div class='body'>${message.body}</div>
+                  <img src='assets/${message.image}'>
+                  </div>`
+    }
+    else{
+      var html = `<div class='message'>
+                  <span class='user_name'>${message.name}</span>
+                  <span class='updated_at'>${message.updated_at}</span>
+                  <div class='body'>${message.body}</div>
+                  </div>`
+    }
     return html;
   }
   $('#new_message').on('submit',function(e){
@@ -19,8 +31,7 @@ $(function(){
     })
     .done(function(data){
       var html = buildHAML(data);
-      console.log(html)
-      $('.chat__messages').append(html)
+      $('.chat__space').append(html)
       $('.text').val('')
     })
   })
