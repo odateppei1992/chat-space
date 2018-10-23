@@ -1,18 +1,21 @@
 $(function(){
   function buildHAML(message){
-    if(!message.image){
+    var src = message.image.url;
+    if(src){
       var html = `<div class='message'>
-                  <span class='user_name'>${message.name}</span>
-                  <span class='updated_at'>${message.updated_at}</span>
-                  <div class='body'>${message.body}</div>
-                  <img src='assets/${message.image}'>
+                    <span class='user_name'>${message.name}</span>
+                    <span class='updated_at'>${message.updated_at}</span>
+                    <div class='body'>${message.body}</div>
+                    <div class='message_image'>
+                      <img src= ${src}>
+                    </div>
                   </div>`
     }
     else{
       var html = `<div class='message'>
-                  <span class='user_name'>${message.name}</span>
-                  <span class='updated_at'>${message.updated_at}</span>
-                  <div class='body'>${message.body}</div>
+                    <span class='user_name'>${message.name}</span>
+                    <span class='updated_at'>${message.updated_at}</span>
+                    <div class='body'>${message.body}</div>
                   </div>`
     }
     return html;
