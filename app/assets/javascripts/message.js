@@ -36,6 +36,7 @@ $(function(){
       var html = buildHAML(data);
       $('.chat__space').append(html)
       $('.text').val('')
+      $('.hidden').val('')
       $('.chat__space').animate({scrollTop: $('.chat__space')[0].scrollHeight}, 'slow','swing');
     })
     .fail(function(data){
