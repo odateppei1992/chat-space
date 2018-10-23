@@ -10,7 +10,7 @@
     = link_to "EDIT",edit_group_path(@group),class:"edit_button"
 
   %hr
-  .chat__messages
+  .chat__space
     = render @messages
   .chat__form
     = form_for [@group,@message] do |f|

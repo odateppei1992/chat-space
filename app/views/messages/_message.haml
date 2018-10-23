@@ -1,8 +1,9 @@
-%span.user_name
-  = message.user.name
-%span.updated_at
-  = message.updated_at.strftime('%Y/%m/%d %H:%M')
-.body
-  = message.body
-.message_image
-  = image_tag message.image if message.image.present?
+.message
+  %span.user_name
+    = message.user.name
+  %span.updated_at
+    = message.updated_at.strftime('%Y/%m/%d %H:%M')
+  .body
+    = message.body
+  .message_image
+    = image_tag message.image if message.image.present?
