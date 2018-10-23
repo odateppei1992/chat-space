@@ -39,7 +39,6 @@
 
 
   &__messages{
-    padding-bottom: 40px;
     padding-left: 40px;
     .user_name{
       font-size: 16px;
@@ -52,6 +51,7 @@
     }
     .body{
       padding-top: 10px;
+      padding-bottom: 40px;
       font-size: 14px;
       color: $text_black;
     }
