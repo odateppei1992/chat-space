@@ -1,8 +1,7 @@
-.chat__messages
-  %span.user_name
-    = message.user.name
-  %span.updated_at
-    = message.updated_at.strftime('%Y/%m/%d %H:%M')
-  .body
-    = message.body
-  = image_tag message.image if message.image.present?
+%span.user_name
+  = message.user.name
+%span.updated_at
+  = message.updated_at.strftime('%Y/%m/%d %H:%M')
+.body
+  = message.body
+= image_tag message.image if message.image.present?
