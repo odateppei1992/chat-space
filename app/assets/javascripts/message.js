@@ -1,7 +1,6 @@
 $(function(){
   function buildHTML(message){
-    var src = message.image.url
-    var image = (src) ? `<img src= ${src}>` : ''
+    var image = (message.image) ? `<img src= ${message.image}>` : ''
     var html = `<div class='message'>
                   <span class='user_name'>${message.name}</span>
                   <span class='created_at'>${message.created_at}</span>
