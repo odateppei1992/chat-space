@@ -4,7 +4,7 @@ $(function(){
     var image = (src) ? `<img src= ${src}>` : ''
     var html = `<div class='message'>
                   <span class='user_name'>${message.name}</span>
-                  <span class='created_at'>${message.creatd_at}</span>
+                  <span class='created_at'>${message.created_at}</span>
                   <div class='body'>${message.body}</div>
                   <div class='message_image'>
                     ${image}
