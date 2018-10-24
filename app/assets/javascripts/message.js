@@ -1,5 +1,5 @@
 $(function(){
-  function buildHAML(message){
+  function buildHTML(message){
     var src = message.image.url;
     if(src){
       var html = `<div class='message'>
@@ -33,7 +33,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      var html = buildHAML(data);
+      var html = buildHTML(data);
       $('.chat__space').append(html)
       $('.text,.hidden').val('')
       $('.chat__space').animate({scrollTop: $('.chat__space')[0].scrollHeight}, 'slow','swing');
