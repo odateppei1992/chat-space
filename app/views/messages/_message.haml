@@ -1,8 +1,9 @@
-.chat__messages
+.message
   %span.user_name
     = message.user.name
-  %span.updated_at
-    = message.updated_at.strftime('%Y/%m/%d %H:%M')
+  %span.created_at
+    = message.created_at.to_s(:datetime)
   .body
     = message.body
-  = image_tag message.image if message.image.present?
+  .message_image
+    = image_tag message.image if message.image.present?

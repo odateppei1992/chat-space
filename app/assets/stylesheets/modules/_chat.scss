@@ -38,22 +38,27 @@
   }
 
 
-  &__messages{
-    padding-bottom: 40px;
-    padding-left: 40px;
-    .user_name{
-      font-size: 16px;
-      font-weight:bold;
-      color: $text_black;
-    }
-    .updated_at{
-      font-size: 12px;
-      color: $light_gray;
-    }
-    .body{
-      padding-top: 10px;
-      font-size: 14px;
-      color: $text_black;
+  &__space{
+    width: calc(100vw - 300px);
+    height: calc(100vh - 210px);
+    overflow: scroll;
+    .message{
+      padding-left: 40px;
+      padding-bottom: 40px;
+      .user_name{
+        font-size: 16px;
+        font-weight:bold;
+        color: $text_black;
+      }
+      .created_at{
+        font-size: 12px;
+        color: $light_gray;
+      }
+      .body{
+        padding-top: 10px;
+        font-size: 14px;
+        color: $text_black;
+      }
     }
   }
   &__form{
