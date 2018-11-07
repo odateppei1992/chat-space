@@ -38,4 +38,12 @@ $(function(){
   })
   setInterval(function(){
   var url = location.pathname
+  if($('.message')[0]){
+    var message_id = $('.message:last').data('message-id');
+  }else{
+    var message_id = 0
+  }
+  console.log(message_id)
+
+  },5000)
 });
