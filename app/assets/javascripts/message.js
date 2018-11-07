@@ -36,4 +36,6 @@ $(function(){
       $(".button").removeAttr("disabled");
     });
   })
+  setInterval(function(){
+  var url = location.pathname
 });
