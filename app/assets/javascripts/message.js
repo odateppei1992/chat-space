@@ -44,6 +44,13 @@ $(function(){
     var message_id = 0
   }
   console.log(message_id)
-
+  $.ajax({
+    url:url,
+    type: "GET",
+    data: {
+      message: {id: message_id}
+    },
+    dataType: 'json',
+  })
   },5000)
 });
