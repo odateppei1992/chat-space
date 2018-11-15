@@ -53,12 +53,11 @@ $(function(){
     dataType: 'json',
   })
   .always(function(data){
-    $.each(data,function(i,data){
-      var html = buildHTML(data);
+    data.messages.forEach(function(message){
+      var html = buildHTML(message);
       $('.chat__space').append(html)
-      $('.text,.hidden').val('')
       $('.chat__space').animate({scrollTop: $('.chat__space')[0].scrollHeight}, 'slow','swing');
     });
-    })
+  })
   },5000)
 });
