@@ -39,15 +39,13 @@ $(function(){
     });
   })
   setInterval(function(){
-  var url = location.pathname
   if($('.message')[0]){
     var message_id = $('.message:last').data('message-id');
-  }else{
+  } else {
     var message_id = 0
   }
-  console.log(message_id)
   $.ajax({
-    url:url,
+    url:location.pathname,
     type: "GET",
     data: {
       message: {id: message_id}
