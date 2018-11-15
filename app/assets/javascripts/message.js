@@ -39,7 +39,7 @@ $(function(){
     });
   })
   setInterval(function(){
-  if($('.message')[0]){
+  if($('.message')){
     var message_id = $('.message:last').data('message-id');
   } else {
     var message_id = 0
