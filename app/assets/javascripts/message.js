@@ -34,6 +34,8 @@ $(function(){
     })
     .always(function(){
       $(".button").removeAttr("disabled");
+      $(".button").removeAttr("data-disable-with");
+      $(".button").val("SEND");
     });
   })
   setInterval(function(){
