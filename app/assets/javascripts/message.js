@@ -39,12 +39,12 @@ $(function(){
     });
   })
   setInterval(function(){
-  message_id = $('.message:last').data('message-id') || 0
+  lastMessageId = $('.message:last').data('message-id') || 0
   $.ajax({
     url:location.pathname,
     type: "GET",
     data: {
-      message: {id: message_id}
+      message: {id: lastMessageId}
     },
     dataType: 'json',
   })
