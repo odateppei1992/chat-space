@@ -55,5 +55,8 @@ $(function(){
       $('.chat__space').animate({scrollTop: $('.chat__space')[0].scrollHeight}, 'slow','swing');
     });
   })
+  .fail(function(new_messages){
+    alert('更新に失敗しました');
+  })
   },5000)
 });
