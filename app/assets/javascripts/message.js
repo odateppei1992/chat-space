@@ -52,8 +52,8 @@ $(function(){
     },
     dataType: 'json',
   })
-  .always(function(data){
-    data.messages.forEach(function(message){
+  .always(function(new_messages){
+    new_messages.forEach(function(message){
       var html = buildHTML(message);
       $('.chat__space').append(html)
       $('.chat__space').animate({scrollTop: $('.chat__space')[0].scrollHeight}, 'slow','swing');
