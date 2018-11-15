@@ -39,11 +39,7 @@ $(function(){
     });
   })
   setInterval(function(){
-  if($('.message')){
-    var message_id = $('.message:last').data('message-id');
-  } else {
-    var message_id = 0
-  }
+  message_id = $('.message') ? $('.message:last').data('message-id') : 0
   $.ajax({
     url:location.pathname,
     type: "GET",
