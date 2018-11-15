@@ -52,7 +52,7 @@ $(function(){
     },
     dataType: 'json',
   })
-  .always(function(new_messages){
+  .done(function(new_messages){
     new_messages.forEach(function(message){
       var html = buildHTML(message);
       $('.chat__space').append(html)
