@@ -39,24 +39,28 @@ $(function(){
     });
   })
   setInterval(function(){
-  lastMessageId = $('.message:last').data('message-id') || 0
-  $.ajax({
-    url:location.pathname,
-    type: "GET",
-    data: {
-      message: {id: lastMessageId}
-    },
-    dataType: 'json',
-  })
-  .done(function(new_messages){
-    new_messages.forEach(function(message){
-      var html = buildHTML(message);
-      $('.chat__space').append(html)
-      $('.chat__space').animate({scrollTop: $('.chat__space')[0].scrollHeight}, 'slow','swing');
-    });
-  })
-  .fail(function(new_messages){
-    alert('更新に失敗しました');
-  })
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+      lastMessageId = $('.message:last').data('message-id') || 0
+      $.ajax({
+        url:location.pathname,
+        type: "GET",
+        data: {
+          message: {id: lastMessageId}
+        },
+        dataType: 'json',
+      })
+      .done(function(new_messages){
+        new_messages.forEach(function(message){
+          var html = buildHTML(message);
+          $('.chat__space').append(html)
+          $('.chat__space').animate({scrollTop: $('.chat__space')[0].scrollHeight}, 'slow','swing');
+        });
+      })
+      .fail(function(new_messages){
+        alert('更新に失敗しました');
+      })
+    } else {
+      clearInterval(interval);
+    }
   },5000)
 });
