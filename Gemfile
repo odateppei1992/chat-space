@@ -68,6 +68,7 @@ gem 'devise'
 gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
 
 group :production do
   gem 'unicorn'
